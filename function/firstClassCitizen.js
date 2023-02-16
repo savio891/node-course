@@ -31,5 +31,5 @@ function sum(a, b) {
 }
 
 sum(2,3) (6)
-const FiveMore = sum(2,3)  
+const FiveMore = sum(2,3)   
 FiveMore(6)
