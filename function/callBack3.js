@@ -1,0 +1,1 @@
+document.getElementsByTagName('body') [0].onclick = event => console.log('The event is started!')
