@@ -11,5 +11,5 @@ const bhaskara = (ax2, bx, c) => {
     return resultados;
 }
 
-console.log(bhaskara(3, -5, 12));
+console.log(bhaskara(2, -7, 3));
 console.log(bhaskara(1, 3, 2));
