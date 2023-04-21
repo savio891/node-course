@@ -3,7 +3,7 @@ function calcularItens(codigo, quantidade) {
     switch(codigo) {
         case 100:
             this.preco = quantidade * 3
-            console.log(`Cachorro quemte no valor de R$${this.preco.toFixed(2)}`)
+            console.log(`Cachorro quente no valor de R$${this.preco.toFixed(2)}`)
             break
         case 200:
             this.preco = quantidade * 4
@@ -30,5 +30,5 @@ function calcularItens(codigo, quantidade) {
     }
 }
 
-calcularItens(100, 2)
+calcularItens(100, 500)
 console.log(typeof calcularItens)
