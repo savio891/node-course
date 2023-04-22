@@ -7,7 +7,7 @@ console.log(MontanteJurosSimples(1400, 0.07, 2))
 
 function AplicacaoJurosCompostos(montante, taxa, tempoAplica) {
     let formula = Math.pow(1 + taxa, tempoAplica)
-    capital = montante / formula
+    let capital = montante / formula
      return capital
 }
 
