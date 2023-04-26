@@ -8,8 +8,8 @@ function trocaValoresVetores(vetorA, vetorB) {
             vetorB.push(vetorA[i])
             vetorA.push(vetorB[i])
         }
-        for(let i = 0; i < tamanho; i++) {
-            vetorA.shift()
+        for(let i = 0; i < tamanho; i++) { //laço para excluir os elementos que permaneceram no array modificado.
+            vetorA.shift() //shift exclui os elementos originais do array.
             vetorB.shift()
         }
 
