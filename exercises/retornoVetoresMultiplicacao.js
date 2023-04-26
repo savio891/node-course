@@ -8,14 +8,17 @@ function retornoVetoresMultiplicacao(valoresNumericos, multiplicador) {
     console.log(valoresNumericos)
 }
 
-retornoVetoresMultiplicacao(valoresNumericos, 2)
+
 
 function retornoVetoresMultiplicacaoSe(valoresNumericos, multiplicador) {
     for(let i in valoresNumericos) {
-        if(valoresNumericos[i] > 5) {
         valoresNumericos[i] = valoresNumericos[i] * multiplicador
         }
+    if(multiplicador > 5) {
+        console.log(valoresNumericos)
+    }else{
+        console.log(`Valor inválido!!`)
     }
-    console.log(valoresNumericos)
 }
-retornoVetoresMultiplicacaoSe(valoresNumericos, 0)
+
+retornoVetoresMultiplicacaoSe(valoresNumericos, 5)
