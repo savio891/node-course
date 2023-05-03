@@ -9,7 +9,7 @@ const LowSalary = (empl, emplCurrent) => {
 
 axios.get(url).then(response => {
     let employees = response.data
-    console.log(employees)
+    //console.log(employees)
 
     const func = employees
     .filter(Chineses)
