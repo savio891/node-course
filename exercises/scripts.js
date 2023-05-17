@@ -14,6 +14,6 @@ function somar(valor1, valor2) {
     
 }
 
-somar(3,8)
+somar(4,8)
     .then(callbackSucesso)
     .catch(callbackError)
