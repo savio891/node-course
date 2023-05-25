@@ -12,14 +12,27 @@
     <h1>Modificando HTML #03</h1>
     <div id='conteudo'></div>
 
-    <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
+    <script>     
+        $(document).ready(function() {
+            const pessoas = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Junia', nota: 9.7 }
+            ]
+            
+            $('#conteudo').append('<h1 align="center" padding="0">Alunos</h1>')
+            $('#conteudo').append('<table>')
+            $('table').append('<tr>')
+            $('tr').append('<td class="nomes">')
+            $('tr').append('<td class="notas">')
+            
+            
+            $(pessoas).each(function(index, element) {
+                $('.nomes').append(`<p>${element.nome}</p>`)
+                $('.notas').append(`<p>${element.nota}</p>`)
+            })
+        })
         
-        // ...
     </script>
 </body>

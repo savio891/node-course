@@ -23,6 +23,38 @@
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
     <script>
-        // ...
+        function clock(element) {
+            const rightTime = $('<p>').html(new Date)
+            const Lessbutton = $('<button>').html('-')
+            const Morebutton = $('<button>').html('+')
+            
+            const $element = $(element)//Allow all resources of jQuery.
+            $element.append(rightTime, Lessbutton, Morebutton)
+            
+            const getCurrentIntervaL = 
+                () => parseInt($element.attr('wm-relogio'))//ParseInt can transform string into an integer number (reading of attribute)
+
+            let timer = null
+            const play = () => {
+                if(timer) clearInterval(timer)
+                timer = setInterval(() => {
+                    rightTime.html(new Date().toLocaleDateString('pt-BR'))
+                }, getCurrentIntervaL())
+            }
+
+            const changeInterval = delta => {
+                const New = Math.max(getCurrentIntervaL() + delta, 1000)//Math.max select a valor greater than 1000 or own value 1000 (change value of attribute)
+                $element.attr('wm-relogio', New)
+                play()
+            }
+
+            Lessbutton.click(e => changeInterval(1000))
+            Morebutton.click(e => changeInterval(-1000))
+            play()
+        }
+
+        $('[wm-relogio]').each((i, e) => new clock(e))
+        $('[wm-relogio]').attr({opa: 1, novo: true})
+        $('[wm-relogio]').removeAttr('opa').removeAttr('novo')
     </script>
 </body>
