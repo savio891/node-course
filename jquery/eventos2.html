@@ -21,6 +21,23 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alternateDraft = () => $('#div1').toggleClass('destaque')
+        //$('#div1').on('mouseenter mouseleave', alternateDraft)
+        $('#div1').hover(alternateDraft, alternateDraft)
+
+        $('#div1').one('mouseenter', e => alert('Warning: thanks!'))//Only one pop-up alert is shown on browserring
+        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
+
+        $(window).resize(function(e) {//Resize function shows values the width and height in the #resultado1 div.
+            const w = $(window).width()
+            const h = $(window).height()
+            $('#resultado1').html(`Width: ${w} and Height: ${h}`)
+        })
+
+        $(':input').select(e => {
+            const early = e.target.selectionStart
+            const end = e.target.selectionEnd
+            $('#resultado2').html(e.target.value.substring(early, end))
+        })
     </script>
 </body>

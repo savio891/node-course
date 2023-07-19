@@ -28,6 +28,37 @@
     <div>Animar!</div>
 
     <script>
-        // ...
+        
+        function animation(contents) {
+            return new Promise(resolve => {
+                resolve(contents)
+            })
+        }
+
+
+        function changeWidth(value, Duration) {
+            $('div').animate({width: `+=${value}`}
+            , Duration)
+        }
+
+        function moveDiagonal(value, Duration) {
+            $('div').animate({top: `+=${value}`, left: `+=${value}`
+            , Duration})
+        }
+
+        function Spin(value, Duration) {
+            $('div').animate({transform: `+=${value}`}, {
+                step: function (value) {
+                    $(this).css('transform', `rotate(${value}deg)`)
+                },
+                duration: Duration
+            }, 'linear')
+        }
+
+        animation()
+            .then(changeWidth(300, 100))
+            .then(changeWidth(-300, 'slow'))
+            .then(moveDiagonal(300, 600))
+            .then(Spin(10300, 3000))
     </script>
 </body>

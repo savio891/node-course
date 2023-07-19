@@ -12,7 +12,10 @@
             .then(resp => resp.text())
             .then(html => {
                 destino.innerHTML = html
-                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1]) //Pegar todo o texto dentro do html dentro da tag script, incluindo as quebras de linhas ([\s\S]), e interpretá-los com a função eval().
+                const resultado = html.match(/\<script\>([\s\S]*)\<\/script\>/) //Pegar todo o texto dentro do html dentro da tag script, incluindo as quebras de linhas ([\s\S]), e interpretá-los com a função eval().
+                if(resultado && resultado.length >= 2) {
+                    eval(resultado[1])
+                }
             })
     }
 
