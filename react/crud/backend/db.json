@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "5833",
+      "user": {
+        "name": "Marcelo Teixeira",
+        "email": "marcelo.teixeira@yahoo.com.br"
+      },
+      "list": [],
+      "name": "Mariana Silveira",
+      "email": "masilva@peugeot.com.br"
+    },
+    {
+      "id": "b5c9",
+      "name": "Bills",
+      "email": "bills@cat.com.br"
+    },
+    {
+      "id": "3dc1",
+      "name": "Anthony Garotinho",
+      "email": "garotinho98@hotmail.com"
+    }
+  ]
+}
