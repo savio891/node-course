@@ -1,3 +1,4 @@
+<!-- /* eslint-disable */ -->
 <template>
     <div id="app">
         <h1>Problema de Monty Hall</h1>
