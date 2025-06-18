@@ -1,0 +1,6 @@
+mongod
+show dbs
+use dbs
+db.createCollection("Estados")
+show collections
+db.Estados.drop()
